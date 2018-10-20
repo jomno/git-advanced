@@ -3,7 +3,7 @@
 branch_name=$(git symbolic-ref --short HEAD)
 
 orig_msg=`cat $1`
-issue_number=`echo ${branch_name} | cut -d '-' -f1  | egrep -o '[0-9]{3,9}'`
+issue_number=`echo ${branch_name} | cut -d '-' -f1  | egrep -o '[0-9]{1,9}'`
 issue_number_in_msg=$(grep -c "\[#$issue_number\]" $1)
 
 if [[ -n $issue_number ]] && [[ ! $issue_number_in_msg -ge 1 ]]; then
