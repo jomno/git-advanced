@@ -13,4 +13,8 @@ git에 hooks 기능을 상황에 맞게 작성하고 있습니다.
 
 ### 사용방법
 
-각 git project에서 .git/hooks 안에다가 `prepare-commit-msg`를 추가해주시면 됩니다.
+```shell
+curl https://raw.githubusercontent.com/jomno/git-advanced/master/hooks/prepare-commit-msg > .git/hooks/prepare-commit-msg
+
+chmod +x .git/hooks/prepare-commit-msg
+```
